@@ -14,7 +14,7 @@ import {
   View,
   Text,
   StatusBar,
-  Button,
+
 } from 'react-native';
 
 import {
@@ -24,7 +24,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { Header, SearchBar } from 'react-native-elements'
+import { Header, SearchBar, Image, Button } from 'react-native-elements'
 
 class App extends Component {
   constructor() {
@@ -54,55 +54,68 @@ class App extends Component {
           }}
         />
         <View style={styles.container}>
-          <View style={styles.buttonContainer}>
-            <Button title="FUTBOL" color="#95F204" />
+          <View style={styles.container1}>
+            <View style={styles.buttonContainer}>
+              <Button title="FUTBOL" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
+            </View>
+            <View style={styles.buttonContainer}>
+              <Button title="BALONCESTO" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
+            </View>
+            <View style={styles.buttonContainer}>
+              <Button title="TENNIS" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
+            </View>
           </View>
-          <View style={styles.buttonContainer}>
-            <Button title="BALONCESTO" color="#95F204" />
+          <View style={{ flex: 20 }}>
+            <Image
+              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
+              style={{ width: "auto", height: 200 }}
+            />
+            <Image
+              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
+              style={{ width: "auto", height: 200 }}
+            />
+            <Image
+              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
+              style={{ width: "auto", height: 200 }}
+            />
+            <Image
+              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
+              style={{ width: "auto", height: 200 }}
+            />
+            <Image
+              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
+              style={{ width: "auto", height: 200 }}
+            />
           </View>
-          <View style={styles.buttonContainer}>
-            <Button title="TENNIS" color="#95F204" />
-          </View>
-        </View>
-        <View style={styles.container}>
-          <View style={styles.buttonContainer}>
-            <Button title="Eventos" color="#70B603" />
-          </View>
-          <View style={styles.buttonContainer}>
-            <Button title="Usuarios" color="#70B603" />
+          <View style={styles.container1}>
+            <View style={styles.buttonContainer}>
+              <Button title="Eventos" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
+            </View>
+            <View style={styles.buttonContainer}>
+              <Button title="Usuarios" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}}/>
+            </View>
           </View>
         </View>
       </>
     );
   }
-
 }
 
 const styles = StyleSheet.create({
-  /*
-    butones:{
-      width:100%,
-    },
-  */
   container: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
-    color: "black",
+    
   },
   container1: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    color: "black",
+    flexDirection: 'row', 
   },
   buttonContainer: {
     flex: 1,
   },
-  typeDeport: {
-    backgroundColor: "#95F204",
-    color: "black",
-  }
+
 });
 
 export default App;
