@@ -17,14 +17,11 @@ import {
 
 } from 'react-native';
 
-import {
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import { Header, SearchBar, Image, Button } from 'react-native-elements'
+import { Evento } from './componentes/Evento'
+import { Botonera} from './componentes/Botonera'
+import{Navegador} from './componentes/Navegador'
 
 class App extends Component {
   constructor() {
@@ -50,51 +47,23 @@ class App extends Component {
           centerComponent={<SearchBar platform="android" placeholder="Type Here..." />}
           rightComponent={{ icon: 'email' }}
           containerStyle={{
-            backgroundColor: '#70B603',
+            backgroundColor: '#00c856',
           }}
         />
         <View style={styles.container}>
-          <View style={styles.container1}>
-            <View style={styles.buttonContainer}>
-              <Button title="FUTBOL" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
-            </View>
-            <View style={styles.buttonContainer}>
-              <Button title="BALONCESTO" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
-            </View>
-            <View style={styles.buttonContainer}>
-              <Button title="TENNIS" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
-            </View>
+        <View style={styles.container1}>
+          <Botonera></Botonera>
           </View>
-          <View style={{ flex: 20 }}>
-            <Image
-              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
-              style={{ width: "auto", height: 200 }}
-            />
-            <Image
-              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
-              style={{ width: "auto", height: 200 }}
-            />
-            <Image
-              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
-              style={{ width: "auto", height: 200 }}
-            />
-            <Image
-              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
-              style={{ width: "auto", height: 200 }}
-            />
-            <Image
-              source={{ uri: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/12/18/15766742679480.jpg" }}
-              style={{ width: "auto", height: 200 }}
-            />
+          <View style={{ flex: 15 }}>
+            <ScrollView>
+              <Evento></Evento>
+              <Evento></Evento>
+              <Evento></Evento>
+              <Evento></Evento>
+              <Evento></Evento>
+            </ScrollView>
           </View>
-          <View style={styles.container1}>
-            <View style={styles.buttonContainer}>
-              <Button title="Eventos" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}} />
-            </View>
-            <View style={styles.buttonContainer}>
-              <Button title="Usuarios" buttonStyle={{backgroundColor:"#70B603"}} titleStyle={{color:"black"}}/>
-            </View>
-          </View>
+          <Navegador></Navegador>
         </View>
       </>
     );
@@ -106,11 +75,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    
+
   },
   container1: {
     flex: 1,
-    flexDirection: 'row', 
+    flexDirection: 'row',
+    justifyContent: "space-around",
   },
   buttonContainer: {
     flex: 1,
