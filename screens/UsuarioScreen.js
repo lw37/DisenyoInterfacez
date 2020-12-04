@@ -13,7 +13,7 @@ import { Header, SearchBar, Image, Input, Button, ButtonGroup, Icon } from 'reac
 
 import { Botonera } from '../componentes/Botonera';
 import DatePicker from 'react-native-datepicker';
-
+import{Navegador} from '../componentes/Navegador'
 class UsuarioScreen extends Component {
     render() {
         return (
@@ -45,12 +45,15 @@ class UsuarioScreen extends Component {
                     type='material'
                     color='#00aced' /> */}
 
-                <View style={{ flex: 3 }}>
+                <View style={{ flex: 3   ,alignItems:'stretch'}}>
 
                     <Button title='Datos Personal' buttonStyle={{ borderRadius: 30, margin: 10, backgroundColor: "#76ff03", alignItems: "stretch" }} titleStyle={{ color: "black" }}></Button>
                     <Button title='Historial Apuestas' buttonStyle={{ borderRadius: 30, margin: 10, backgroundColor: "#76ff03", alignItems: "stretch" }} titleStyle={{ color: "black" }}></Button>
                     <Button title='Log Out' buttonStyle={{ borderRadius: 30, margin: 10, backgroundColor: "#76ff03", alignItems: "stretch" }} titleStyle={{ color: "black" }}></Button>
                 </View>
+          
+                <Navegador></Navegador>
+                
             </View>
         )
     }
