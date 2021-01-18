@@ -17,22 +17,22 @@ export class ApuestaHistorial extends Component {
             <View style={{ flex: 1, flexDirection: 'row-reverse' }}>
                 <View style={styles.box}>
                     <View style={{ flex: 2 }}>
-                        <Text>Valencia</Text>
+                        <Text>{this.props.equipoLocal}</Text>
                         <Text>    VS</Text>
-                        <Text>Bacelona</Text>
+                        <Text>{this.props.equipoVisitante}</Text>
                     </View>
                     <View style={{ flex: 3 }}>
                         <View style={{ flex: 1, justifyContent: 'space-between', }}>
-                            <Text>Cuota: 1.5</Text>
-                            <Text>Dinero:200 eur</Text>
-                            <Text>2077/07/07</Text>
+                            <Text>Cuota: {this.props.cuota}</Text>
+                            <Text>Dinero:{this.props.dinero} eur</Text>
+                            <Text>{this.props.fecha}</Text>
                         </View>
                     </View>
                     <View style={{ flex: 3 }}>
                         <View style={{ flex: 1, justifyContent: 'space-between', }}>
-                            <Text>Nombre:Wei</Text>
-                            <Text>Apellido:Luo</Text>
-                            <Text>Pago:Visa</Text>
+                            <Text>Nombre:{this.props.nombre}</Text>
+                            <Text>Apellido:{this.props.apellido}</Text>
+                            <Text>Pago:{this.props.pago}</Text>
                         </View>
                     </View>
                 </View>
