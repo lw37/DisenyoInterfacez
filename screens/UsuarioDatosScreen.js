@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+    import { Header, SearchBar, Image, Input, Button, ButtonGroup } from 'react-native-elements'
     SafeAreaView,
     StyleSheet,
     ScrollView,
@@ -7,7 +8,6 @@ import {
     Text,
     StatusBar,
 } from 'react-native';
-import { Header, SearchBar, Image, Input, Button, ButtonGroup } from 'react-native-elements'
 import { Botonera } from '../componentes/Botonera';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import UsuarioScreen from './UsuarioScreen';
