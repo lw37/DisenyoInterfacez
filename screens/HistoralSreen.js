@@ -16,14 +16,14 @@ import DatePicker from 'react-native-datepicker';
 import { ApuestaHistorial } from '../componentes/ApuestaHistorial'
 class LoginScreen extends Component {
     state = {
-        apuestas: [{ equipoLocal: 'Valencia', equipoVisitante, fecha: '2077-12-21', dinero: 600,cuota:1.5,nombre:'Wei',apellido:'luo',pago:"Visa"},
-        { equipoLocal: 'Valencia', equipoVisitante, fecha: '2077-12-21', dinero: 600,cuota:1.5,nombre:'Wei',apellido:'luo',pago:"Visa"},
-        { equipoLocal: 'Valencia', equipoVisitante, fecha: '2077-12-21', dinero: 600,cuota:1.5,nombre:'Wei',apellido:'luo',pago:"Visa"},    
-        { equipoLocal: 'Valencia', equipoVisitante, fecha: '2077-12-21', dinero: 600,cuota:1.5,nombre:'Wei',apellido:'luo',pago:"Visa"},
-        { equipoLocal: 'Valencia', equipoVisitante, fecha: '2077-12-21', dinero: 600,cuota:1.5,nombre:'Wei',apellido:'luo',pago:"Visa"},
-        { equipoLocal: 'Valencia', equipoVisitante, fecha: '2077-12-21', dinero: 600,cuota:1.5,nombre:'Wei',apellido:'luo',pago:"Visa"},
-        { equipoLocal: 'Valencia', equipoVisitante, fecha: '2077-12-21', dinero: 600,cuota:1.5,nombre:'Wei',apellido:'luo',pago:"Visa"}
-    ]
+        apuestas: [{ equipoLocal: 'Valencia', equipoVisitante:"Bacelona", fecha: '2077-12-21', dinero: 600, cuota: 1.5, nombre: 'Wei', apellido: 'luo', pago: "Visa" },
+        { equipoLocal: 'Valencia', equipoVisitante:"Bacelona", fecha: '2077-12-21', dinero: 600, cuota: 1.5, nombre: 'Wei', apellido: 'luo', pago: "Visa" },
+        { equipoLocal: 'Valencia', equipoVisitante:"Bacelona", fecha: '2077-12-21', dinero: 600, cuota: 1.5, nombre: 'Wei', apellido: 'luo', pago: "Visa" },
+        { equipoLocal: 'Valencia', equipoVisitante:"Bacelona", fecha: '2077-12-21', dinero: 600, cuota: 1.5, nombre: 'Wei', apellido: 'luo', pago: "Visa" },
+        { equipoLocal: 'Valencia', equipoVisitante:"Bacelona", fecha: '2077-12-21', dinero: 600, cuota: 1.5, nombre: 'Wei', apellido: 'luo', pago: "Visa" },
+        { equipoLocal: 'Valencia', equipoVisitante:"Bacelona", fecha: '2077-12-21', dinero: 600, cuota: 1.5, nombre: 'Wei', apellido: 'luo', pago: "Visa" },
+        { equipoLocal: 'Valencia', equipoVisitante:"Bacelona", fecha: '2077-12-21', dinero: 600, cuota: 1.5, nombre: 'Wei', apellido: 'luo', pago: "Visa" }
+        ]
     }
     render() {
         return (
@@ -35,29 +35,23 @@ class LoginScreen extends Component {
                     containerStyle={{
                         backgroundColor: '#00c856',
                     }}></Header>
-
-                <ScrollView>
-                    <ApuestaHistorial></ApuestaHistorial>
-                    <ApuestaHistorial></ApuestaHistorial>
-                </ScrollView>
                 <FlatList
                     data={this.state.apuestas}
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item }) => {
                         return (
                             <View >
-                                                    <ApuestaHistorial
-                                                    equipoLocal={item.equipoLocal}
-                                                    equipoVisitante={item.equipoVisitante}
-                                                    fecha={item.fecha}
-                                                    dinero={item.dinero}
-                                                    cuota={item.cuota}
-                                                    nombre={item.nombre}
-                                                    apellido={item.apellido}
-                                                    pago={item.pago}
-                                                    />
+                                <ApuestaHistorial
+                                    equipoLocal={item.equipoLocal}
+                                    equipoVisitante={item.equipoVisitante}
+                                    fecha={item.fecha}
+                                    dinero={item.dinero}
+                                    cuota={item.cuota}
+                                    nombre={item.nombre}
+                                    apellido={item.apellido}
+                                    pago={item.pago}
+                                />
                             </View>
-
                         );
                     }}
                 />
